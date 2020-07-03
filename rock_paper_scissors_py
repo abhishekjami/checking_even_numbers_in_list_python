@@ -1,15 +1,14 @@
 player1 = input("enter player1 move : ").lower()
 player2 = input("enter player2 move : ").lower()
-L = ['rock','paper','scissors']
-while True:
-    if player1 or player2 not in L:
-        print("invalid")
-        break
-    elif L.index(player2)==(L.index(player1)+1)%3:
-        print("player 2 wins!")
-        break
-    elif L.index(player1)==(L.index(player2)+1)%3:
-        print("player 1 wins")
-        break
-    else:
-        print("its a draw! try again")
+L = list(['paper','rock','scissor'])
+if player1 not in L:
+    print("invalid")
+if player2 not in L:
+    print("invalid")
+elif L.index(player1)==(L.index(player2)+1)%3:
+    print("player 2 wins!")
+
+elif L.index(player2)==(L.index(player1)+1)%3:
+    print("player 1 wins")
+else:
+    print("its a draw! try again")
